@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="js/vendor/zepto.min.js"></script>
+  <script src="js/vendor/touch.min.js"></script>
+  <script src="js/midAutumn.js"></script>
+  <script>
+    const fileInput = document.getElementById('avatar');
+    const previewImg = document.getElementById('preview');
+
+    fileInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          previewImg.src = e.target.result;
+          previewImg.style.display = 'inline-block';
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+  </script>
+
+  <link rel="stylesheet" href="css/animated.css"/>
+  <link rel="stylesheet" href="css/midAutumn.css"/>
+</head>
+<body>
+
+<!--一-->
+<div class="page page1">
+  <div>
+    <div class="text1 animate zq1">中秋节快乐！</div>
+    <div class="text2 animate zq2">中秋节快乐！</div>
+    <img class="pic3 animate1 yun1 infinite" src="images/yun1.png" alt=""/>
+    <img class="pic4 animate1 yun2 infinite" src="images/yun2.png" alt=""/>
+  </div>
+</div>
+
+<!--二-->
+<div class="page page2 pageDown">
+
+  <div class="zi zi1 hide">
+    <img src="images/xingxing.png" alt="" class="xing animate xingxing hide"/>
+    <div class="jianjie1 animate zizi hide">水调歌头</div>
+  </div>
+
+  <div class="xian1 animate xianxian delay1 hide"></div>
+
+  <div class="zi zi2 hide">
+    <img src="images/xingxing.png" alt="" class="xing animate xingxing delay2 hide"/>
+    <div class="jianjie2 animate zizi1 delay2 hide">明月几时有？把酒问青天。</div>
+  </div>
+
+  <div class="xian2 animate xianxian delay3 hide"></div>
+
+  <div class="zi zi3 hide">
+    <img src="images/xingxing.png" alt="" class="xing animate xingxing delay4 hide"/>
+    <div class="jianjie3 animate zizi delay4 hide">不知天上宫阙,今夕是何年</div>
+  </div>
+
+  <div class="xian3 animate xianxian delay5 hide"></div>
+
+  <div class="zi zi4 hide">
+    <img src="images/xingxing.png" alt="" class="xing animate xingxing delay5 hide"/>
+    <div class="jianjie4 animate zizi1 delay5 hide">我欲乘风归去，又恐琼楼玉宇</div>
+  </div>
+
+</div>
+
+<!--三-->
+<div class="page page6 pageDown">
+
+  <div class="hide">
+    <div class="qiyuan animate you hide">
+      登录中秋网站-查看更多惊喜
+    </div>
+  </div>
+
+  <div class="hide">
+    <div class="qiyuan animate you hide">
+      <div class="glass">
+        <form class="form">
+          <label for="avatar">选择头像:</label>
+          <input type="file" id="avatar" name="avatar" accept="image/*"><br><br>
+          <img id="preview" src="#" alt="预览头像" style="max-width: 200px; display: none;"><br><br>
+          <label id="username">Username:</label>
+          <input type="text" name="username"/><br><br>
+          <label id="password">Password:</label>
+          <input type="password" name="username"/><br><br>
+          <div style="display:flex;flex-direction:row;justify-content:flex-start">
+            <input type="submit" value="Login" style="width:80px;height:30px;color:black;border-color: cadetblue">
+            <input type="submit" value="Register" style="width:80px;height:30px;color:black;border-color: cadetblue;margin-left:100px">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
