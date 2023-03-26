@@ -6,21 +6,13 @@
   <script src="js/vendor/zepto.min.js"></script>
   <script src="js/vendor/touch.min.js"></script>
   <script src="js/midAutumn.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
-    const fileInput = document.getElementById('avatar');
-    const previewImg = document.getElementById('preview');
-
-    fileInput.addEventListener('change', (event) => {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          previewImg.src = e.target.result;
-          previewImg.style.display = 'inline-block';
-        };
-        reader.readAsDataURL(file);
-      }
-    });
+    function submit() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      console.log("用户名：" + username + "，密码：" + password);
+    }
 
   </script>
 
@@ -82,24 +74,18 @@
   <div class="hide">
     <div class="qiyuan animate you hide">
       <div class="glass">
-        <form class="form">
-          <label for="avatar">选择头像:</label>
-          <input type="file" id="avatar" name="avatar" accept="image/*"><br><br>
-          <img id="preview" src="#" alt="预览头像" style="max-width: 200px; display: none;"><br><br>
-          <label id="username">Username:</label>
-          <input type="text" name="username"/><br><br>
-          <label id="password">Password:</label>
-          <input type="password" name="username"/><br><br>
-          <div style="display:flex;flex-direction:row;justify-content:flex-start">
-            <input type="submit" value="Login" style="width:80px;height:30px;color:black;border-color: cadetblue">
-            <input type="submit" value="Register" style="width:80px;height:30px;color:black;border-color: cadetblue;margin-left:100px">
-          </div>
+        <div id="login">
+          <img src="./images/img.png" alt="" style="width: 200px;height:auto;margin:-250px 50px auto"/>
+        <form id="myForm" action="http://localhost:63342/midAutumn/homePage.html?_ijt=6rs5frdp3k3oce8g1ki2hi63r5" method="GET">
+          <input type="text" required="required" placeholder="用户名" name="u"></input>
+          <input type="password" required="required" placeholder="密码" name="p"></input>
+          <button class="but" type="submit">登录</button>
         </form>
       </div>
     </div>
   </div>
 
 </div>
-
+</div>
 </body>
 </html>
