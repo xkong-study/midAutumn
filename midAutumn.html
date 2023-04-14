@@ -7,85 +7,18 @@
   <script src="js/vendor/touch.min.js"></script>
   <script src="js/midAutumn.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    function submit() {
-      var username = document.getElementById("username").value;
-      var password = document.getElementById("password").value;
-      console.log("用户名：" + username + "，密码：" + password);
-    }
-
-  </script>
-
   <link rel="stylesheet" href="css/animated.css"/>
   <link rel="stylesheet" href="css/midAutumn.css"/>
 </head>
 <body>
-
-<!--一-->
 <div class="page page1">
   <div>
-    <div class="text1 animate zq1">中秋节快乐！</div>
-    <div class="text2 animate zq2">中秋节快乐！</div>
+    <div class="text1 animate zq1">Happy midAutumn！</div>
+    <div class="text2 animate zq2">Happy midAutumn！</div>
+    <div class="text3 animate1 zq2"><a href="Login.html">Enter login</a></div>
     <img class="pic3 animate1 yun1 infinite" src="images/yun1.png" alt=""/>
     <img class="pic4 animate1 yun2 infinite" src="images/yun2.png" alt=""/>
   </div>
-</div>
-
-<!--二-->
-<div class="page page2 pageDown">
-
-  <div class="zi zi1 hide">
-    <img src="images/xingxing.png" alt="" class="xing animate xingxing hide"/>
-    <div class="jianjie1 animate zizi hide">水调歌头</div>
-  </div>
-
-  <div class="xian1 animate xianxian delay1 hide"></div>
-
-  <div class="zi zi2 hide">
-    <img src="images/xingxing.png" alt="" class="xing animate xingxing delay2 hide"/>
-    <div class="jianjie2 animate zizi1 delay2 hide">明月几时有？把酒问青天。</div>
-  </div>
-
-  <div class="xian2 animate xianxian delay3 hide"></div>
-
-  <div class="zi zi3 hide">
-    <img src="images/xingxing.png" alt="" class="xing animate xingxing delay4 hide"/>
-    <div class="jianjie3 animate zizi delay4 hide">不知天上宫阙,今夕是何年</div>
-  </div>
-
-  <div class="xian3 animate xianxian delay5 hide"></div>
-
-  <div class="zi zi4 hide">
-    <img src="images/xingxing.png" alt="" class="xing animate xingxing delay5 hide"/>
-    <div class="jianjie4 animate zizi1 delay5 hide">我欲乘风归去，又恐琼楼玉宇</div>
-  </div>
-
-</div>
-
-<!--三-->
-<div class="page page6 pageDown">
-
-  <div class="hide">
-    <div class="qiyuan animate you hide">
-      登录中秋网站-查看更多惊喜
-    </div>
-  </div>
-
-  <div class="hide">
-    <div class="qiyuan animate you hide">
-      <div class="glass">
-        <div id="login">
-          <img src="./images/img.png" alt="" style="width: 200px;height:auto;margin:-250px 50px auto"/>
-        <form id="myForm" action="http://localhost:63342/midAutumn/homePage.html?_ijt=6rs5frdp3k3oce8g1ki2hi63r5" method="GET">
-          <input type="text" required="required" placeholder="用户名" name="u"></input>
-          <input type="password" required="required" placeholder="密码" name="p"></input>
-          <button class="but" type="submit">登录</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-</div>
 </div>
 </body>
 </html>
