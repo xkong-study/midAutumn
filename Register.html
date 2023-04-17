@@ -86,12 +86,12 @@
           console.log(formData)
           // 发送 AJAX 请求给后端
           $.ajax({
-            type: "POST",
+            type: "GET",
             url: "http://localhost:3050/user/register", // 替换为实际的后端接口 URL
             data: formData, // 发送的数据对象
             success: function(response) {
               console.log(response); // 可以在控制台打印后端返回的响应
-              // 这里可以根据后端返回的响应进行页面跳转等操作
+              alert('success return login')
             },
             error: function(error) {
               // 请求失败后的处理逻辑
